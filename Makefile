@@ -4,3 +4,6 @@ dev_up:
 
 dev_down:
 	docker-compose -f compose/dev/db.yml down --remove-orphans
+
+test:
+	pytest -v --cov=core/ --cov-report term-missing ./tests/
