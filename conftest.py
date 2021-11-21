@@ -1,10 +1,10 @@
 import os
-import tests
+import pytest
 
 from tests.fixtures import *  # isort:skip # noqa: F403, F401
 
 
-@tests.fixture(scope="session")
+@pytest.fixture(scope="session")
 def app(request):
     os.environ["FLASK_ENV"] = "testing"
     from core.application import create_flask_app
