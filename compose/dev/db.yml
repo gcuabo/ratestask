@@ -1,0 +1,19 @@
+version: '3'
+services:
+  xeneta_postgres:
+    container_name: xeneta_postgres
+    image: postgres:11.5
+    ports:
+      - 5432:5432
+    networks:
+      - xeneta_dev
+    restart: on-failure
+    volumes:
+      - ../../var/sql/rates.sql:/docker-entrypoint-initdb.d/rates.sql
+    environment:
+      POSTGRES_DB: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+
+networks:
+  xeneta_dev:
