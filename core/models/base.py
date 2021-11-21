@@ -2,7 +2,7 @@ from typing import Union
 
 from core.db import fetch_many
 
-__all__ = ("BaseModel", "ParentChildModel")
+# __all__ = ("BaseModel", "ParentChildModel")
 
 
 class BaseModel(object):
