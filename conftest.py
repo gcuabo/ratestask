@@ -10,5 +10,11 @@ def app(request):
     from core.application import create_flask_app
 
     app = create_flask_app()
+    # Establish an application context before running the tests.
+    ctx = app.app_context()
+    ctx.push()
+
+    def teardown():
+        ctx.pop()
 
     return app
