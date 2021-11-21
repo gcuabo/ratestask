@@ -26,4 +26,13 @@ class Price(BaseModel):
             )
         )
 
+        print(
+            get_rates_query.format(
+                date_from=date_from,
+                date_to=date_to,
+                origins=cls._list_to_query_safe_list(cls, origin),
+                destinations=cls._list_to_query_safe_list(cls, destination),
+            )
+        )
+
         return records

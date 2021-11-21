@@ -18,3 +18,10 @@ def test_fetch_one(app):
     test_query = "SELECT * from ports"
     results = fetch_one(test_query)
     assert isinstance(results, tuple)
+
+
+def test_execute(app):
+    from core.db import execute
+
+    test_query = "INSERT INTO prices values ('CNGGZ', 'EETLL', '2017-01-01', 1)"
+    execute(test_query)
