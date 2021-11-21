@@ -1,11 +1,12 @@
 import os
+
 from flask import Flask
 from flask_restful import Api
 
 from .config import Config
+from .db import db
 from .exceptions import configure_exception_handler
 from .urls import register_api_urls
-from .db import db
 
 
 def create_flask_app():

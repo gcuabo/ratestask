@@ -1,6 +1,7 @@
-from .base import BaseModel
 from core.db import fetch_many
 from core.queries import get_rates_query
+
+from .base import BaseModel
 
 
 class Price(BaseModel):

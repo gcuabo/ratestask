@@ -1,5 +1,4 @@
 from flask import jsonify
-
 from marshmallow.exceptions import ValidationError
 
 

@@ -1,6 +1,7 @@
-from .base import ParentChildModel
 from core.db import fetch_one
-from core.queries import check_port_exists, get_port_query, get_port_children_query
+from core.queries import check_port_exists, get_port_children_query, get_port_query
+
+from .base import ParentChildModel
 
 
 class Port(ParentChildModel):

@@ -1,10 +1,11 @@
-from .base import ParentChildModel
 from core.db import fetch_one
 from core.queries import (
     check_region_exists,
-    get_region_query,
     get_region_children_query,
+    get_region_query,
 )
+
+from .base import ParentChildModel
 
 
 class Region(ParentChildModel):

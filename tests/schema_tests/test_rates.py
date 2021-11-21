@@ -1,11 +1,11 @@
+import pytest
+
 from core.api.schema.rates import RatesGetInputSchema, RatesGetOutputSchema
 from core.exceptions import (
     InvalidDateFromDateToException,
     InvalidOriginDestinationException,
     PortOrRegionNotFound,
 )
-
-import pytest
 
 
 def test_rate_input_no_errors(rates_query_params):

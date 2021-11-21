@@ -1,9 +1,9 @@
-from marshmallow import Schema, fields, validates_schema, validates
+from marshmallow import Schema, fields, validates, validates_schema
 
 from core.exceptions import (
     InvalidDateFromDateToException,
-    PortOrRegionNotFound,
     InvalidOriginDestinationException,
+    PortOrRegionNotFound,
 )
 from core.models.port import Port
 from core.models.region import Region

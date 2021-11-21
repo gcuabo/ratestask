@@ -1,5 +1,5 @@
-from flask_restful import Resource
 from flask import request
+from flask_restful import Resource
 
 from core.api.schema.rates import RatesGetInputSchema, RatesGetOutputSchema
 from core.models.price import Price
