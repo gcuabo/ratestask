@@ -24,6 +24,13 @@ A ping endpoint is available to check the health of the flask app
 curl "http://localhost:5000/ping"
 ```
 
+## Kill the dev environment
+
+To spin down dev docker containers:
+```
+make dev_down
+```
+
 ## Tests
 
 To run the test from docker containers, just do the ff make command:
