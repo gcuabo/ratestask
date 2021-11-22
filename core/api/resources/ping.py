@@ -1,6 +1,8 @@
+from datetime import datetime
+
 from flask_restful import Resource
 
 
 class Ping(Resource):
     def get(self):
-        return {"foo": "bar"}
+        return {"pong": str(datetime.now())}
