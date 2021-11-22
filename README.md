@@ -16,7 +16,7 @@ make dev_up
 
 Access the flask app in port 5000
 ```
-curl "http://localhost:5000/rates"
+curl -v "http://localhost:5000/rates?date_from=2016-01-01&date_to=2016-01-10&origin=CNSGH&destination=north_europe_main"
 ```
 
 A ping endpoint is available to check the health of the flask app
