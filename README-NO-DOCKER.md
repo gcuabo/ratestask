@@ -18,6 +18,11 @@ Install requirements from Pipfile.lock
 pipenv install --system --deploy --dev
 ```
 
+Activate pipenv virtualenv
+```
+pipenv shell
+```
+
 run the flask app from the application factory
 ```
 FLASK_APP=core.application:create_flask_app flask run
