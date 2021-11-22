@@ -4,5 +4,3 @@ COPY . /app
 WORKDIR /app
 RUN pip install pipenv
 RUN pipenv install --system --deploy --dev
-
-ENV DB_HOST db_testing
