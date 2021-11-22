@@ -1,7 +1,7 @@
 version: '3'
 services:
-  xeneta_postgres:
-    container_name: xeneta_postgres
+  db_dev:
+    container_name: db_dev
     image: postgres:11.5
     ports:
       - 5432:5432
