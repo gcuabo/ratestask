@@ -1,9 +1,6 @@
 from core.db import fetch_one
-from core.queries import (
-    check_region_exists,
-    get_region_children_query,
-    get_region_query,
-)
+from core.queries import (check_region_exists, get_region_children_query,
+                          get_region_query)
 
 from .base import ParentChildModel
 
@@ -27,4 +24,4 @@ class Region(ParentChildModel):
 
         regions_in = cls.get_children(slug)
         regions_in.append(slug)
-        return Port().get_children(regions_in)
+        return Port.get_children(regions_in)
