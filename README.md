@@ -35,5 +35,7 @@ make dev_down
 
 To run the test from docker containers, just do the ff make command:
 ```
-make run docker_test
+make docker_test
 ```
+
+Report on the tests results + coverage should be available on the terminal
