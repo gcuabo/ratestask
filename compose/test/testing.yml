@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+  app_testing:
+    container_name: app_testing
+    build:
+      context: ../../
+      dockerfile: compose/test/Dockerfile
+    networks:
+      - xeneta_testing
+    environment:
+      DB_HOST: 'db_testing'
+      DB_USER: 'postgres'
+      DB_PASSWORD: 'postgres'
+      DB_NAME: 'postgres'
+      ENVIRONMENT: 'testing'
+    depends_on:
+      - db_testing
+    command: sh -c "pytest -v --cov=/app/core/ --cov-report term-missing /app/tests"
+
+  db_testing:
+    image: postgres:11.5
+    networks:
+      - xeneta_testing
+    restart: always
+    volumes:
+      - ../../var/sql/rates.sql:/docker-entrypoint-initdb.d/rates.sql
+    environment:
+      POSTGRES_DB: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+
+
+networks:
+  xeneta_testing:

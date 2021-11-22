@@ -64,3 +64,13 @@ def test_rates_data(rates_query_params):
     day1_record = records[0]
     assert str(day1_record[0]) == "2017-01-01"
     assert day1_record[1] == 1
+
+    # delete data afterwards
+    delete_inserted_data = (
+        "DELETE from prices where day in ('2017-01-01', '2017-01-02', '2017-01-03')"
+    )
+    execute(delete_inserted_data)
+    records = Price.get_rates(**rates_query_params)
+    day1_record = records[0]
+    assert str(day1_record[0]) == "2017-01-01"
+    assert day1_record[1] is None

@@ -12,6 +12,7 @@ def db():
             app.config["DB_PASSWORD"],
         )
     )
+
     return con
 
 

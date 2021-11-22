@@ -5,9 +5,13 @@ name = "pypi"
 
 [packages]
 flask = "*"
+marshmallow = "*"
+psycopg2-binary = "*"
+flask-restful = "*"
 
 [dev-packages]
 pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.9"

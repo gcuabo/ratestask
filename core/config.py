@@ -7,7 +7,7 @@ class Config(object):
         self.FLASK_ENV = flask_env
 
         # DATABASE
-        self.DB_NAME = os.getenv("DB_NAME") or "postgres"
-        self.DB_USER = os.getenv("DB_USER") or "postgres"
-        self.DB_HOST = os.getenv("DB_HOST") or "localhost"
-        self.DB_PASSWORD = os.getenv("DB_PASSWORD") or "postgres"
+        self.DB_NAME = os.environ.get("DB_NAME") or "postgres"
+        self.DB_USER = os.environ.get("DB_USER") or "postgres"
+        self.DB_HOST = os.environ.get("DB_HOST") or "localhost"
+        self.DB_PASSWORD = os.environ.get("DB_PASSWORD") or "postgres"
